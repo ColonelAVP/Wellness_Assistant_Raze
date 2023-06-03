@@ -1,0 +1,72 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- my_name
+- greet
+- mood_great
+- goodbye
+- affirm
+- deny
+- mood_unhappy
+- bot_challenge
+- mood_thankful
+- mood_motivated
+- mood_lonely
+- mood_excited
+- mood_bored
+- mood_confused
+- mood_love
+- mood_hopeful
+- mood_grateful
+- mood_disappointed
+- tell_name
+- ask_lower_stress
+- ask_eat_healthy
+- ask_exercise
+entities:
+- name
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+responses:
+  utter_greet:
+  - text: Hey! How you doin' ?
+  utter_name:
+  - text: My name is Raze
+  utter_ask_name:
+  - text: What is your name?
+  utter_confirm_name:
+  - text: Thank you, {name}! How can I assist you?
+  utter_ask_mobile_number:
+  - text: What is your mobile number?
+  utter_thanks:
+  - text: Thanks for providing the values
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_stress_info:
+  - text: It's okay to feel overwhelmed at times. Try to set realistic expectations and exercise time managment techniques, like dividing large tasks into more manageable pieces. Relaxation techniques, deep breathing and meditation can also be beneficial.
+  utter_exercise_info:
+  - text: Most healthy adults should aim to get about 150min of moderate exercise per week. This includes activities like jogging or playing outdoor sports.
+  utter_diet_info:
+  - text: A healthy diet includes fruits and veggies, whole grains, diary, lean protein, and fats. Aim for variety of food, and balance
+actions:
+- action_save_name
+- utter_ask_name
+- utter_confirm_name
+- utter_greet
+- utter_name
