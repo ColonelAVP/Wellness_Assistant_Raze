@@ -54,3 +54,25 @@ class ActionSavename(Action):
             name = None  # Handle the case when no entity is present
 
         return [SlotSet("name", name)]
+
+
+class ActionBeingLost(Action):
+    def name(self) -> Text:
+        return "action_being_lost"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+
+        entity_love_one = tracker.latest_message.get("entities", [])
+        # Save the username or perform any other necessary processing
+
+        if entity_love_one:
+            loved_one = entity_love_one[0].get("value")
+        else:
+            loved_one = None  # Handle the case when no entity is present
+
+        return [SlotSet("loved_one", loved_one)]

@@ -16,6 +16,7 @@ nlu:
     - goodevening
     - good afternoon
     - Hi
+    - Hello
 - intent: goodbye
   examples: |
     - cu
@@ -36,6 +37,8 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - Yes
+    - absolutely
 - intent: deny
   examples: |
     - no
@@ -45,6 +48,7 @@ nlu:
     - don't like that
     - no way
     - not really
+    - No, I dont feel like
 - intent: mood_great
   examples: |
     - perfect
@@ -88,6 +92,7 @@ nlu:
     - I'm so frustrated
     - I'm sad and lonely
     - I feel hopeless
+    - I'm very sad
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -101,6 +106,7 @@ nlu:
     - You're amazing, thanks
     - I'm grateful for your support
     - Thanks a lot for being there
+    - Thanks
 - intent: mood_motivated
   examples: |
     - I need some motivation
@@ -218,3 +224,19 @@ nlu:
     - Is walking once a day enough exercise?
     - How much exercise should I do every day?
     - How many times per week should I go to the gym
+- intent: work_anxiety
+  examples: |
+    - My work pressure makes me anxious
+    - I'm feeling anxious about work
+    - Can you help me with my work anxiety?
+    - I'm stressed about my job, what should I do?
+    - How can I manage my anxiety at work?
+    - I need advice for dealing with work-related anxiety
+- intent: loss_of_loving_person
+  examples: |
+    - I lost my [dog](loved_one), Nino
+    - I lost my [grandmother](loved_one) to cancer
+    - I lost my [sister](loved_one) in an accident last month
+    - My [uncle](loved_one) died because of heart attack
+    - we lost our favourite [dog](loved_one), jack
+    - I lost my [grandmother](loved_one)
